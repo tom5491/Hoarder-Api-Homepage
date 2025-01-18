@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3091:3091"
+    environment:
+      HOARDER_API_KEY: ${HOARDER_API_KEY}
+      HOARDER_SERVER_ADDR: ${HOARDER_SERVER_ADDR}
+    volumes:
+      - .:/usr/src/app
