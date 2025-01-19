@@ -26,7 +26,6 @@ app.get('/api/summary', async (req, res) => {
         const listsOutput = await runCommand(`hoarder lists list --api-key ${apiKey} --server-addr ${serverAddr} --json`);
         const lists = JSON.parse(listsOutput);
         let listArray = lists.lists;
-        console.log({ listArray });
 
         let totalLists = listArray.length;
         let totalItems = 0;
